@@ -1,0 +1,100 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(133, 57, 205);
+}
+.container{
+    background-color: black;
+    width: 280px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 3%;
+    border-radius: 25px;
+}
+#heading{
+    color: white;
+    box-shadow: 0px 0px 10px aqua;
+    border-radius: 25px;
+    padding: 3px;
+}
+#heading1{
+    color: white;
+    width: 150px;
+    margin-left: 65px;
+    padding: 3px;
+    box-shadow: 0px 0px 10px aqua;
+    border-radius: 25px;
+}
+.container:hover{
+    border: 2px solid white;
+    box-shadow: 0px 0px 30px white;
+}
+#passwordInput{
+    width: 250px;
+    height: 13px;
+    padding: 11px;
+    outline: none;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px aqua;
+}
+.input i{
+    position: absolute;
+    margin-left: -29px;
+    margin-top: 6px;
+    font-size: 24px;
+    color: rgb(5, 5, 129);
+}
+.text{
+    display: flex;
+    margin-top: -23px;
+}
+.option{
+    margin-top: 35px;
+}
+#passwordlength {
+    width: 35px;
+    height: 17px;
+    position: absolute;
+    margin-left: 230px;
+    margin-top: 25px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px aqua;
+}
+#passwordlen:hover {
+    box-shadow: 0px 0px 80px aqua;
+}
+.text input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    accent-color: rgb(2,150,2);
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 25px;
+    box-shadow: 0px 0px 10px aqua;
+}
+.text input[type=checkbox]:hover{
+    box-shadow: 0px 0px 80px aqua;
+}
+.text p {
+    margin-left: 11px;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+button{
+  font-size: 0.8rem;
+  box-shadow: 0px 0px 20px aqua;
+  border-radius: 12px;
+  background-color: aqua;
+  padding: 10px 20px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: large;
+}
+button:hover{
+    box-shadow: 0px 0px 80px aqua;
+}

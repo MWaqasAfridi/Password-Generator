@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0e13d06589.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">Random Password</h1>
+        <h1 id="heading1">Generator</h1>
+     <div class="input">
+        <input type="text" id="passwordInput" value=""><i onclick="copy()" class="fa-solid fa-clone"></i>
+     </div>
+     <div class="option">
+        <div class="text">
+            <p>Password Length</p><input type="number" value="8" id="passwordlength">
+        </div>
+        <div class="text">
+            <p>Including UpperCase</p><input type="checkbox" id="upper">
+        </div>
+        <div class="text">
+            <p>Including LowerCase</p><input type="checkbox" id="lower">
+        </div>
+        <div class="text">
+            <p>Including Number</p><input type="checkbox" id="num">
+        </div>
+        <div class="text">
+            <p>Including Symbol</p><input type="checkbox" id="sym">
+        </div>
+        <button onclick="myFun()">Generate Password</button>
+     </div>
+    </div>
+    
+
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
