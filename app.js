@@ -1,47 +1,35 @@
-let upperData = "ASDFGHJKLPOIUYTREWQZXCVBNM";
-let lowerData = "asdfghjklpoiuytrewqzxcvbnm";
-let numData = "0123456789";
-let symData = "!@#$%^&*()";
+function generateNum(){
+   var passwordlength = document.getElementById("passwordlength").value;
+   var char = "";
+   
+   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+   var numCase = "0123456789";
+   var specialCase = "!@#$%^&*()";
 
-let passwordInput = document.getElementById("passwordInput");
-let passwordlength = document.getElementById("passwordlength");
-let upper = document.getElementById("upper");
-let lower = document.getElementById("lower");
-let num = document.getElementById("num");
-let sym = document.getElementById("sym");
+   var upper = document.getElementById("upperCase").checked;
+   var lower = document.getElementById("lowerCase").checked;
+   var num = document.getElementById("numCase").checked;
+   var special = document.getElementById("specialCase").checked;
+   
+   if(upper){
+      char += upperCase;
+   }
+   if(lower){
+      char += lowerCase;
+   }
+   if(num){ 
+      char += numCase;
+   }
+   if(special){
+      char += specialCase;
+   }
 
-function generateNum(data) {
-   return data[Math.floor(Math.random() * data.length)];
+   var password = "";
+   for(var i = 0; i < passwordlength; i++){
+      var randomNum  =  Math.floor(Math.random()*char.length);
+
+      password += char[randomNum];
+   }
+   document.getElementById("passwordInput").value = password;
 }
-
-function generate(password = "") {
-   if (upper.checked) {
-      password += generateNum(upperData);
-   }
-   if (lower.checked) {
-      password += generateNum(lowerData);
-   }
-   if (num.checked) {
-      password += generateNum(numData);
-   }
-   if (sym.checked) {
-      password += generateNum(symData);
-   }
-   if (password.length < passwordlength.value) {
-      return generate(password);
-   }
-   console.log(password);
-   passwordInput.value = password;
-}
-
-function myFun() {
-   generate();
-}
-
-function copy(){
-   alert("Text Copied")
-}
-
-
-
-
