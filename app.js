@@ -1,17 +1,17 @@
 function generateNum(){
-   var passwordlength = document.getElementById("passwordlength").value;
-   var char = "";
    
    var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
    var lowerCase = "abcdefghijklmnopqrstuvwxyz";
    var numCase = "0123456789";
    var specialCase = "!@#$%^&*()";
 
+   var passwordlength = document.getElementById("passwordlength").value;
    var upper = document.getElementById("upperCase").checked;
    var lower = document.getElementById("lowerCase").checked;
    var num = document.getElementById("numCase").checked;
    var special = document.getElementById("specialCase").checked;
    
+   var char = "";
    if(upper){
       char += upperCase;
    }
@@ -23,6 +23,11 @@ function generateNum(){
    }
    if(special){
       char += specialCase;
+   }
+   
+   if(char === ""){
+         alert("Please select at least one character type...");
+         return;
    }
 
    var password = "";
