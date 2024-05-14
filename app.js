@@ -28,8 +28,11 @@ function generateNum(){
    var password = "";
    for(var i = 0; i < passwordlength; i++){
       var randomNum  =  Math.floor(Math.random()*char.length);
-
       password += char[randomNum];
    }
    document.getElementById("passwordInput").value = password;
+}
+
+function copy(){
+   alert("Text Copy")
 }
